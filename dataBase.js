@@ -4,7 +4,7 @@ let db;
 
  function connectToDB(){
     if (typeof db === "undefined"){
-        const url = "mongodb+srv://m001-student:m001-mongodb-basics@cluster0.wqksh.mongodb.net/shop?retryWrites=true&w=majority"
+        const url = process.env.url
         const client = new MongoClient(url)
 
         client.connect().then((connected_clinet)=>{
