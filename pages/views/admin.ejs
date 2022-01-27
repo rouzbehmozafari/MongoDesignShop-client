@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designer Shop</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/form.css">
 </head>
 <body>
     <header>
@@ -30,7 +30,16 @@
             <li><a href="">T D B</a></li>
         </ul>
     </header>
-    <%- include('partials/prods.ejs') %>
+    <main>
+        <form action="/newItem" method="post" enctype="multipart/form-data">
+            <input type="url" placeholder="link shop" name="urlshop">
+            <input type="url" placeholder="image url" name="urlpic">
+            <input type="text" placeholder="name" name="name">
+            <input type="text" placeholder="company" name="company">
+            <input type="number" placeholder="price" name="price">
+            <input type="submit" value="SUBMIT">
+        </form>
+    </main>
     <footer>
         <div class="fgrid">
             <article>

@@ -15,4 +15,7 @@ let db;
 function getProds(){
     return db.collection('users').find().toArray()
 }
-module.exports = {connectToDB,getProds}
+function addItem(obj){
+    db.collection('users').insertOne(obj)
+}
+module.exports = {connectToDB,getProds,addItem}
