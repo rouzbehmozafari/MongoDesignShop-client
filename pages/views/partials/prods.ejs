@@ -1,0 +1,16 @@
+<main>
+
+        <% prods.forEach((article)=> { %>
+            <div class="oneThird" onclick="location.href='<%= article.LinkShop %>'"">
+                <img src= "<%= article.ProductLink %>" alt="backPack">
+                <div class="details">
+                    <div class="desc">
+                        <p class="boldDesc"><%= article.ProductName %></p>
+                        <p class="brand"><%= article.Company %></p>
+                    </div>
+                    <p class="price"><%= article.Price %></p>
+                </div>
+            </div>
+        <% }) %>
+
+</main>

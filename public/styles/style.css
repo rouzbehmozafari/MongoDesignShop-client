@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap');
+
+/* General Styles */
+
+
+/* Farbe: #323A45 / #848484 */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Karla', sans-serif;
+    font-size: 15px;
+    color: #323A45;
+}
+
+body {
+    max-width: 1440px;
+    padding: 2.5% 5%;
+}
+a {
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+    color: black;
+}
+.bold:hover , nav ul a:hover , .name:hover{
+    color: #848484 ;
+    transition: .3s;
+}
+
+.fade {
+    color: #323A45;
+}
+
+/* Header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-items: center;
+    
+}
+
+
+nav ul {
+    display: flex;
+}
+nav ul a {
+    font-size: 20px; 
+
+}
+
+nav li {
+    margin-left: 80px;
+
+}
+.name {
+    font-weight: bold;
+    font-size: 25px;
+}
+/* Main */
+main {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+main img:hover {
+    opacity: .5;
+    transition: .2s;
+}
+.oneThird:hover {
+    cursor: pointer;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.brand {
+    color: #848484 ;
+    margin-top: 10px;
+}
+
+.full {
+    grid-column: 1/4;
+}
+
+.full , .oneThird {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    font-size: 12px;
+}
+.fgrid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 0;
+}
+.fhead {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.fgrid article {
+    margin-right: 10%;
+}
+.social a {
+    display: block;
+}
+.end {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.close {
+    width: 30px;
+    color: white;
+}
+
+.navli , .close , .menu{
+    opacity: 0;
+    transform: translateY(-220%);
+}
+
+
+@media screen and (min-width: 801px) {
+    .navli , .close , .menu{
+        display: none;
+    }
+    
+    }
+     
+@media screen and (max-width: 800px) {
+   .oneThird {
+       grid-column: 1/4;
+   }
+   .fgrid article {
+    width: 100%;
+
+   }
+
+    nav ul {
+       display: none;
+   }
+
+   .navli {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+       flex-wrap: wrap;
+       background-color: #848484 ;
+       position: absolute;
+       top: 60px;
+       right: 0;
+       width: 100%;
+       transition: .5s ease;
+       z-index: 1;
+   }
+   .navli a {
+    color: white;
+    font-size: 30px;
+    font-size: 20px;
+   }
+   .navli li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+   }
+
+   .menu {
+       /* display: unset; */
+       opacity: 1;
+       transform: unset;
+   }
+
+
+   .name {
+       position: absolute;
+       text-align: left;
+       top: 3%;
+   }
+   .menu , .close {
+       position: absolute;
+       right: 5%;
+       top: 3%;
+       transition: .5s;
+   }
+
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Shop</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="name" href="#">THE DESIGN SHOP</a>
+            <div id="menu" class="menu" onclick="openMenu()"><a href="#" ><svg viewBox="0 0 100 80" width="30" height="30">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+              </svg></a></div>
+            <a href="#" id="closeNavB" class="close" onclick="closeNav()"><img  src="assets/images/close.png" alt=""></a>
+            <ul class="wideNav">
+                <div></div>
+                <li><a href="">Weekly Recommendations</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">T D B</a></li>
+            </ul>
+        </nav>
+        <ul id='navli' class="navli">
+            <li><a href="">Weekly Recommendations</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">T D B</a></li>
+        </ul>
+    </header>
+    <%- include('partials/prods.ejs') %>
+    <footer>
+        <div class="fgrid">
+            <article>
+                <p class="fhead">The Design Shop</p>
+                <div> <span>Carefully cuated online design store. <br> founded and designed by </span> <span class="bold">Ruby Bacanovic.</span> </div>
+            </article>
+            <article>
+                <p class="fhead">Contact</p>
+                <div> <p >Email us</p> <p>Work with us</p> </div>
+            </article>
+            <article>
+                <p class="fhead">Newsletter</p>
+                <div><span>Click here to </span><a href="#" class="bold">subscribe.</a><p class="italic">Don't wory. We hate spam too.</p></div>
+            </article>
+            <article>
+                <p class="fhead">Find Us Here</p>
+                <div class="social">
+                    <a href="#"  class="bold">Facebook</a>
+                    <a href="#"  class="bold">Instagram</a>
+                    <a href="#"  class="bold">Twitter</a>
+                </div>
+            </article>
+        </div>
+        <div class="end">
+            <p class="fade">&copy; 2019 The Design Shop &#9830; The Disign Blog</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
